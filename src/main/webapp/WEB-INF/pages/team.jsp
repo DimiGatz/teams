@@ -36,6 +36,21 @@
         </tr>
     </table>
 </form:form>
+<br>
+
+<table style="border:1px solid black;">
+    <tr>
+        <td>Team ID</td><td>Name</td><td>Coach</td><td>Titles</td>
+    </tr>
+    <c:forEach items="${teamList}" var="team">
+        <tr>
+            <td>${team.teamId}</td>
+            <td>${team.name}</td>
+            <td>${team.coach}</td>
+            <td>${team.titlesWon}</td>
+        </tr>
+    </c:forEach>
+</table>
 
 </body>
 </html>
