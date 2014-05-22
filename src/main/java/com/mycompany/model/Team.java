@@ -25,11 +25,10 @@ public class Team {
     public Team() {
     }
 
-    public Team(int id, String name, String coach, int titles) {
-        this.teamId = id;
-        this.name = name;
+    public Team(String coach, String name, int titlesWon) {
         this.coach = coach;
-        this.titlesWon = titles;
+        this.name = name;
+        this.titlesWon = titlesWon;
     }
 
     public String getCoach() {
@@ -40,14 +39,6 @@ public class Team {
         this.coach = coach;
     }
 
-    public int getTeamId() {
-        return teamId;
-    }
-
-    public void setTeamId(int teamId) {
-        this.teamId = teamId;
-    }
-
     public String getName() {
         return name;
     }
@@ -56,15 +47,21 @@ public class Team {
         this.name = name;
     }
 
+    public int getTeamId() {
+        return teamId;
+    }
 
-    public int getTitles() {
+    public void setTeamId(int teamId) {
+        this.teamId = teamId;
+    }
+
+    public int getTitlesWon() {
         return titlesWon;
     }
 
-    public void setTitles(int titles) {
-        this.titlesWon = titles;
+    public void setTitlesWon(int titlesWon) {
+        this.titlesWon = titlesWon;
     }
-
 
     @Override
     public String toString() {
@@ -72,7 +69,7 @@ public class Team {
                 "coach='" + coach + '\'' +
                 ", teamId=" + teamId +
                 ", name='" + name + '\'' +
-                ", titles=" + titlesWon +
+                ", titlesWon=" + titlesWon +
                 '}';
     }
 }

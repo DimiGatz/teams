@@ -9,6 +9,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -32,6 +33,7 @@ public class TeamController {
     }
 
 
+    @RequestMapping(value = "/team.do", method = RequestMethod.POST)
     public String doActions(@ModelAttribute Team team,
                             BindingResult bindingResult,
                             @RequestParam String action,
@@ -61,7 +63,7 @@ public class TeamController {
 
         }
 
-        map.addAttribute("team", team);
+        map.addAttribute("team", teamResult);
         map.addAttribute("teamList", teamService.getAllTeams());
 
 
