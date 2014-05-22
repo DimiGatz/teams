@@ -1,0 +1,1 @@
+Spring 3, Maven, MySql, Hibernate simple CRUD web application.
