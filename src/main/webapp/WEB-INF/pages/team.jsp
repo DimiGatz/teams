@@ -4,6 +4,32 @@
 <html>
 <head>
     <title>Team Management</title>
+
+    <style type="text/css">
+        table.gridtable {
+            font-family: verdana,arial,sans-serif;
+            font-size:11px;
+            color:#333333;
+            border-width: 1px;
+            border-color: #666666;
+            border-collapse: collapse;
+        }
+        table.gridtable th {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #dedede;
+        }
+        table.gridtable td {
+            border-width: 1px;
+            padding: 8px;
+            border-style: solid;
+            border-color: #666666;
+            background-color: #ffffff;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -38,7 +64,7 @@
 </form:form>
 <br>
 
-<table style="border:1px solid black;">
+<table class="gridtable">
     <tr>
         <td>Team ID</td><td>Name</td><td>Coach</td><td>Titles</td>
     </tr>
