@@ -15,6 +15,34 @@
     </properties>
 
 
+    <!--to upload the artifacts to the repository manager after build (mvn clean deploy)-->
+    <distributionManagement>
+        <snapshotRepository>
+            <id>whatever</id>
+            <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
+    <!-- locations to download artifacts in every build (first , if not exist then second)-->
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>whatever</id>
+            <name>Nexus</name>
+            <url>http://localhost:8081/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+
     <dependencies>
 
         <dependency>
